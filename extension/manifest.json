@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Media Controls",
+    "version": "0.1.0",
+
+    "description": "Exposes an API for external programs to control web media apps.",
+
+    "icons": {
+        "48": "icons/pauseplay-48.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://www.monstercat.com/*"],
+            "js": ["content/api.js", "content/monstercat.js"]
+        }
+    ]
+}
